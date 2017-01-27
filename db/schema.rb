@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170127175355) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",            default: "", null: false
+    t.string   "email",            default: "", null: false
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",       default: 0,  null: false
     t.datetime "current_sign_in_at"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170127175355) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.index ["username"], name: "index_users_on_username", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
